@@ -19,9 +19,9 @@ use App\Http\Controllers\AwalController;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 /*
 //Praktikum 1
@@ -69,48 +69,60 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 //Praktikum 3
 //1
-Route::get('/', [AwalController::class, 'index']);
-//2
-Route::prefix('category')->group(function () {
-    Route::get('/marbel-edu-games', function () {
-        echo"Marbel Edu Games";
-    });
-    Route::get('/marbel-and-friends-kids-games', function () {
-        echo"Marbel and Friens Kids Games";
-    });
-    Route::get('/riri-story-book', function () {
-        echo"Riri Story Book";
-    });
-    Route::get('/kolak-kids-songs', function () {
-        echo"Kolak Kids Songs";
-    });
-});
-//3
-Route::get('/news/{id}', function ($id) {
-    return 'News '.$id;
-    });
-    Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
-    //
-    });
+// Route::get('/', [AwalController::class, 'index']);
+// //2
+// Route::prefix('category')->group(function () {
+//     Route::get('/marbel-edu-games', function () {
+//         echo"Marbel Edu Games";
+//     });
+//     Route::get('/marbel-and-friends-kids-games', function () {
+//         echo"Marbel and Friens Kids Games";
+//     });
+//     Route::get('/riri-story-book', function () {
+//         echo"Riri Story Book";
+//     });
+//     Route::get('/kolak-kids-songs', function () {
+//         echo"Kolak Kids Songs";
+//     });
+// });
+// //3
+// Route::get('/news/{id}', function ($id) {
+//     return 'News '.$id;
+//     });
+//     Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+//     //
+//     });
 
     
-//4
-Route::prefix('program')->group(function () {
-    Route::get('/karir', function () {
-        echo"Karir";
-    });
-    Route::get('/magang', function () {
-        echo"Magang";
-    });
-    Route::get('/kunjungan-industri', function () {
-        echo"Kunjungan Industri";
-    });
-});
+// //4
+// Route::prefix('program')->group(function () {
+//     Route::get('/karir', function () {
+//         echo"Karir";
+//     });
+//     Route::get('/magang', function () {
+//         echo"Magang";
+//     });
+//     Route::get('/kunjungan-industri', function () {
+//         echo"Kunjungan Industri";
+//     });
+// });
     
-//5
-Route::get('/about-us', function () {
-    echo "Saya bernama Ardha <br>
-    kalian bisa akses semua akun medsos di <br>
-    @ardhanurazizah";
-   });
+// //5
+// Route::get('/about-us', function () {
+//     echo "Saya bernama Ardha <br>
+//     kalian bisa akses semua akun medsos di <br>
+//     @ardhanurazizah";
+//    });
    
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/home', function(){
+    return view('home');
+});
