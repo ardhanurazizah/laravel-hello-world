@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AwalController;
-
+use App\Http\Models\Contact;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -123,6 +123,8 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/home', function(){
-    return view('home');
-});
+// Route::get('/home', function(){
+//     return view('home', ['contacts'=>Contact::index()]);
+// });
+
+Route::get('/', [HomeController::class, 'index']);

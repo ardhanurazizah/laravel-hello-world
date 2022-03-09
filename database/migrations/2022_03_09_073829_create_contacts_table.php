@@ -17,6 +17,7 @@ class CreateContactsTable extends Migration
             $table->id();
             $table->string('foto', 100);
             $table->string('deskripsi', 100);
+            $table->string('class', 100);
             $table->timestamps();
         });
     }
