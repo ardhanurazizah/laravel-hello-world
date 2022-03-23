@@ -3,15 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Contact;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
     // public function index(){
-    //     return view('home', ['contacts'=>Contact::index()]);
+    //     return 'Hi! Selamat Datang di Website Laravel';
+    // }
+    // public function index(){
+    //     return view('home', ['posts'=>Post::index()]);
     // }
     public function index(){
-        return view('beranda');
+    
+        $user = Auth::user();
+        return view('beranda',['user' => $user]);
     }
-   
 }
