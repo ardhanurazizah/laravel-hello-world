@@ -7,6 +7,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AwalController;
 use App\Http\Models\Contact;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,10 @@ use App\Http\Models\Contact;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 
 // Route::get('/', function () {
@@ -127,4 +133,8 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 //     return view('home', ['contacts'=>Contact::index()]);
 // });
 
-Route::get('/', [HomeController::class, 'index']);
+//  Route::get('/', [HomeController::class, 'index']);
+
+//  Auth::routes();
+
+//  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
