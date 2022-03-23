@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.masterLayout')
 
 @section('content')
 <div class="container">
@@ -20,7 +20,7 @@
                          {{ session('status') }}
                         </div>
                      @endif
-                     <table class="table table-responsive">
+                     <table class="table table-responsive" style="margin-bottom:125px; padding:20px; width:500px; margin-left:300px">
                      <tr><th>Username</th><th>:</th><td>{{ $user->username }}</td></tr>
                      <tr><th>Name</th><th>:</th><td>{{ $user->name }}</td></tr>
                      <tr><th>Email</th><th>:</th><td>{{ $user->email }}</td></tr>
