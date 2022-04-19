@@ -4,9 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
+// use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AwalController;
 use App\Http\Models\Contact;
+use App\Http\Controllers\ArticleController;
+
+Route::resource('articles', ArticleController::class);
 
 
 /*
@@ -19,10 +22,10 @@ use App\Http\Models\Contact;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::resource('articles', ArticleController::class);
 
 
 // Route::get('/', function () {
