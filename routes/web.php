@@ -9,6 +9,8 @@ use App\Http\Controllers\AwalController;
 use App\Http\Models\Contact;
 use App\Http\Controllers\ArticleController;
 
+Auth::routes();
+
 Route::resource('articles', ArticleController::class);
 
 
